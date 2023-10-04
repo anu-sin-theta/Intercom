@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>anufied</title>
+    <!-- Include Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-$END$
+<h1>Intercom at CSED</h1>
+
+<!-- Buttons -->
+<button id="allowButton">Allow</button>
+<button id="denyButton">Deny</button>
+<button id="viewButton">View</button>
+
+<div class="flex-card">
+    <h2></h2>
+    <p id="dataParagraph">Allow/Deny the visitor or View live-cam feed.</p>
+</div>
+
+<!-- Include your JavaScript -->
+<script src="theconnector.js"></script>
 </body>
 </html>

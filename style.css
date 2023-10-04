@@ -1,0 +1,75 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #4CAF50, #2196F3);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+h1 {
+    color: #333333;
+    padding-top: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+     /* Add an inline CSS background gradient */
+
+
+/* Add styles for the flex card */
+.flex-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.flex-card p {
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+}
+
+#allowButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#denyButton {
+    background-color: #f44336;
+    color: white;
+}
+
+#viewButton {
+    background-color: #2196F3;
+    color: white;
+}
+
+button:hover {
+    background-color: #555555;
+    transform: scale(1.05);
+}
+
+.success {
+    color: #4CAF50;
+    font-weight: bold;
+}
