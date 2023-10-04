@@ -2,7 +2,7 @@ body {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
     text-align: center;
-    background: linear-gradient(to bottom, #4CAF50, #2196F3);
+    background: linear-gradient(to bottom, purple, #2196F3);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -15,7 +15,7 @@ h1 {
 }
 
 button {
-    padding: 12px 24px;
+    padding: 13px 24px;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -37,7 +37,7 @@ button {
     flex-direction: column;
     width: 300px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 100px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -73,3 +73,4 @@ button:hover {
     color: #4CAF50;
     font-weight: bold;
 }
+/* Header */
