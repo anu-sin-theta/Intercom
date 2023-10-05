@@ -26,10 +26,25 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-     /* Add an inline CSS background gradient */
+.refresh-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    align-self: flex-end;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.refresh-button:hover {
+    box-shadow: 0 0 10px 5px rgba(255, 140, 0, 0.7);
+    transform: scale(1.05);
+}
 
 
-/* Add styles for the flex card */
+
 .flex-card {
     display: flex;
     justify-content: center;
@@ -42,7 +57,17 @@ button {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
+.door {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30px;
+    margin: 50px auto;
+    padding: 55px;
+    background-color: darkblue;
+    border-radius: 8px;
+}
 .flex-card p {
     text-align: center;
     font-size: 16px;
@@ -73,4 +98,4 @@ button:hover {
     color: #4CAF50;
     font-weight: bold;
 }
-/* Header */
+
