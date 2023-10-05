@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (doorStatus === "Open") {
                 doorStatusElement.innerHTML = "Door is Open";
                 doorStatusElement.style.color = "#4CAF50"; // Optional: Change text color for "Open"
-            } else if (doorStatus === "Closed") {
+            } else if (doorStatus === "Close") {
                 doorStatusElement.innerHTML = "Door is Closed";
                 doorStatusElement.style.color = "#f44336"; // Optional: Change text color for "Closed"
             } else {
