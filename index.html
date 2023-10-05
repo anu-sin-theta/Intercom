@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
     <title>anufied</title>
     <!-- Include Firebase JavaScript SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -20,6 +22,15 @@
     <h2>Developed at Research wing.</h2>
     <p id="dataParagraph">Allow/Deny the visitor or View live-cam feed.</p>
 </div>
+<!-- Add a "Refresh" button -->
+<button id="refreshButton" class="refresh-button">Refresh</button>
+
+<!-- show door status from javascript-->
+<div class="door">
+    <h2>Door Status</h2>
+    <p id="Status">Loading...</p>
+</div>
+
 
 <!-- Include your JavaScript -->
 <script src="theconnector.js"></script>
