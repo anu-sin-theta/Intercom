@@ -19,7 +19,7 @@ loginButton.addEventListener("click", () => {
         console.log("User authenticated.");
 
         // Automatically redirect to "intercom.html" after authentication
-        window.location.href = "index2.html";
+        window.location.href = "intercom.html";
     } else {
         // Authentication failed
         console.error("Authentication failed. Invalid credentials.");
