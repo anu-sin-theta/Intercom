@@ -17,17 +17,29 @@ const database = firebase.database();
 const allowButton = document.getElementById("allowButton");
 allowButton.addEventListener("click", () => {
     writeToDatabase("Allow");
+        setTimeout(function () {
+        removeData();
+    }, 8000);
 });
 
 const denyButton = document.getElementById("denyButton");
 denyButton.addEventListener("click", () => {
     writeToDatabase("Deny");
+        setTimeout(function () {
+        removeData();
+    }, 8000);
 });
 
 const viewButton = document.getElementById("viewButton");
-viewButton.addEventListener("click", () => {
-    writeToDatabase("View");
+viewButton.addEventListener("change", () => {
+    if (viewButton.checked) {
+        writeToDatabase("View");
+    }
+    else {
+        database.ref("viewButton").remove();
+    }
 });
+
 
 function writeToDatabase(value) {
     if (value === "View") {
@@ -101,7 +113,6 @@ refreshButton.addEventListener("click", refreshPage);
 function removeData() {
     database.ref("allowButton").remove()
     database.ref("denyButton").remove()
-    database.ref("viewButton").remove()
 }
 
 

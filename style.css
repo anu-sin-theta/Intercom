@@ -7,16 +7,27 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
     color: #333333;
-    padding-top: 20px;
+    padding-top: 40px;
+    font-size: 50px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 button {
-    justify-content: center;
-    align-content: center;
     padding: 13px 24px;
     font-size: 16px;
     font-weight: bold;
@@ -28,12 +39,69 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.toggle-label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggle-label-on {
+    color: #4CAF50;
+}
+
+.toggle-label-off {
+    color: #f44336;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: #4CAF50;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
 .refresh-button {
     background-color: #f44336;
     color: white;
     padding: 10px 20px;
     border: none;
-    align-self: center;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
@@ -45,31 +113,31 @@ button {
     transform: scale(1.05);
 }
 
-
-
 .flex-card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 300px;
-    margin: 50px auto;
-    padding: 100px;
-    background-color: white;
+    margin: 20px auto;
+    padding: 70px;
+    background-color: lightseagreen; height: 100vh;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .door {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 30px;
-    margin: 50px auto;
-    padding: 55px;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
     background-color: darkblue;
     border-radius: 8px;
 }
+
 .flex-card p {
     text-align: center;
     font-size: 16px;
@@ -100,4 +168,3 @@ button:hover {
     color: #4CAF50;
     font-weight: bold;
 }
-
