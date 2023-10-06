@@ -15,7 +15,7 @@ ref2 = db.reference('denyButton')
 ref3 = db.reference('viewButton')
 ref4 = db.reference('doorStatus')
 def door():
-    return "Close"
+    return "Open"
 while 1:
     try:
         time.sleep(1)
