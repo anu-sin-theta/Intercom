@@ -76,7 +76,8 @@ function writeToDatabase(value) {
         removeData();
     }, 8000);
 }
-//
+//function to allow and push notification
+
 
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 doorStatusElement.style.color = "#f44336"; // Optional: Change text color for "Closed"
             } else {
                 doorStatusElement.innerHTML = "Not updated, check R-pi's internet connection :)"; // Handle other status values if needed
-                doorStatusElement.style.color = "#333333"; // Optional: Change text color for other statuses
+                doorStatusElement.style.color = "#333333";
             }
         });
     }
