@@ -30,13 +30,21 @@ denyButton.addEventListener("click", () => {
     }, 8000);
 });
 
-const viewButton = document.getElementById("viewButton");
+const view = document.getElementById("view");
+view.addEventListener("click", () => {
+    writeToDatabase("View");
+        setTimeout(function () {
+        removeData();
+    }, 8000);
+});
+
+const viewButton = document.getElementById("camera");
 viewButton.addEventListener("change", () => {
     if (viewButton.checked) {
-        writeToDatabase("View");
+        writeToDatabase("Camera");
     }
     else {
-        database.ref("viewButton").remove();
+        database.ref("Camera").remove();
     }
 });
 
@@ -75,6 +83,17 @@ function writeToDatabase(value) {
     setTimeout(function () {
         removeData();
     }, 8000);
+
+    if (value === "Camera") {
+        database.ref("cameraStatus").set("Camera")
+            .then(() => {
+                console.log("Data written to the database successfully.");
+                showSuccessMessage();
+            })
+            .catch((error) => {
+                console.error("Error writing data to the database:", error);
+            });
+    }
 }
 //function to allow and push notification
 
@@ -114,6 +133,8 @@ refreshButton.addEventListener("click", refreshPage);
 function removeData() {
     database.ref("allowButton").remove()
     database.ref("denyButton").remove()
+    database.ref("viewButton").remove()
+    database.ref("cameraStatus").remove()
 }
 
 

@@ -14,6 +14,7 @@ ref1 = db.reference('allowButton')
 ref2 = db.reference('denyButton')
 ref3 = db.reference('viewButton')
 ref4 = db.reference('doorStatus')
+ref5 = db.reference('cameraStatus')
 
 def check_door():
     return "Open"
