@@ -30,7 +30,7 @@ def closedoor():
 def send_email():
     gmail_user = "atcsedintercom@gmail.com"
     gmail_pwd = "kucu kfwv cspf vmph"
-    receiver = ['pavansisodia8@gmail.com']  # must be a list
+    receiver = ['radmonk8979@gmail.com']  # must be a list
 
     mail_content = EmailMessage()
 
