@@ -35,7 +35,7 @@ view.addEventListener("click", () => {
     writeToDatabase("View");
         setTimeout(function () {
         removeData();
-    }, 8000);
+    }, 4000);
 });
 
 const viewButton = document.getElementById("camera");

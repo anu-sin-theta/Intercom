@@ -30,7 +30,7 @@ def closedoor():
 def send_email():
     gmail_user = "atcsedintercom@gmail.com"
     gmail_pwd = "kucu kfwv cspf vmph"
-    receiver = ['radmonk8979@gmail.com']  # must be a list
+    receiver = ['shekharupadhyay7983@gmail.com']  # must be a list
 
     mail_content = EmailMessage()
 
@@ -66,7 +66,7 @@ def send_email():
             }
 
             .card {
-                background-color: white;
+                background-color: purple;
                 width: 300px;
                 border-radius: 10px;
                 padding: 20px;
@@ -126,9 +126,9 @@ while True:
             data1 = ref1.get()
             data2 = ref2.get()
             data3 = ref3.get()
-            print("Data retrieved from the database:", data1)
-            print("Data retrieved from the database:", data2)
-            print("Data retrieved from the database:", data3)
+            print(data1)
+            print(data2)
+            print(data3)
             time.sleep(1)
 
             doorStatus = check_door()
