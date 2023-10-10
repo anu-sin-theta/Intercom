@@ -184,7 +184,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 0px 65px;
+  margin: 10px 60px;
+  padding-top: 50px;
   align-items: center;
 }
 
