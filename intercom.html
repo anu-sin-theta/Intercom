@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>anufied</title>
-<!-- Include Firebase JavaScript SDK -->
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
@@ -14,7 +13,6 @@
 <div class="head-btn">
     <h1>Intercom at CSED</h1>
 
-<!-- Container for buttons and toggle switch -->
 <div class="button-container">
     <div>
          <button id="allowButton">Allow</button>
@@ -23,7 +21,6 @@
     </div>
 
 
-    <!-- Toggle switch for "View" and "Off" -->
     <div class="toggle-container">
         <span class="toggle-label toggle-label-off">Off</span>
         <label class="toggle-switch">
@@ -34,22 +31,18 @@
     </div>
 </div>
 </div>
-<!-- Flex card -->
 <div class="flex-card">
     <h2>Developed at Research wing.</h2>
     <p id="dataParagraph">Allow/Deny the visitor or View live-cam feed.</p>
 </div>
 
-<!-- Add a "Refresh" button -->
 <button id="refreshButton" class="refresh-button">Refresh</button>
 
-<!-- Show door status from JavaScript -->
 <div class="door">
     <h2>Door Status</h2>
     <p id="Status">Loading...</p>
 </div>
 
-<!-- Include your JavaScript -->
 <script src="theconnector.js"></script>
 <script src="auth.js"></script>
 </body>
