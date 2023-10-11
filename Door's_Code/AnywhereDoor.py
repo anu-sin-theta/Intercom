@@ -141,7 +141,7 @@ while True:
                 send_email()
                 time.sleep(2)
             else:
-                print("No View")
+                pass
             if data1 == "Allow":
                 opendoor()
             else:
