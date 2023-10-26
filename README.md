@@ -27,6 +27,28 @@ To install and use the Intercom System, follow these steps:
 4. Add recognized faces to the "recognized" directory and encode them using the Face Recognition Library.
 5. Configure email settings for sending notifications.
 
+## Required Libraries
+
+Before you begin using the Intercom System, make sure you have the following libraries installed:
+
+- [face_recognition](https://github.com/ageitgey/face_recognition): A popular library for face recognition.
+- [OpenCV](https://opencv.org/): An open-source computer vision and machine learning software library.
+- [smtplib](https://docs.python.org/3/library/smtplib.html): A Python library for sending email.
+- [firebase-admin](https://firebase.google.com/docs/admin/setup): The Firebase Admin SDK for accessing Firebase services.
+
+You can install these libraries using `pip` to ensure the system works correctly.
+
+
+
+pip install face_recognition
+
+pip install opencv-python
+
+pip install smtplib
+
+pip install firebase-admin
+
+
 ## Usage
 
 To use the Intercom System:
@@ -52,4 +74,4 @@ This project is licensed under the CC License. See the LICENSE file for details 
 
 ## Contact
 
-For inquiries, contact [Anubhav Singh] at [mahindrathar456@gmail.com](mailto:your.email@example.com).
+For inquiries, contact [Anubhav Singh] at [mahindrathar456@gmail.com](mailto:your.mahindrathar456@gmail.com).
