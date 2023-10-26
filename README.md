@@ -48,7 +48,7 @@ Contributions to this project are welcome. Follow these guidelines:
 
 ## License
 
-This project is licensed under the XYZ License. See the LICENSE file for details.
+This project is licensed under the CC License. See the LICENSE file for details (Will add soon...).
 
 ## Contact
 
