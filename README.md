@@ -11,10 +11,10 @@ This documentation provides information about the Intercom System, which include
 
 ## Screenshots
 
-![User Interface](image_url_1)
+![User Interface](Screenshot%20from%202023-10-26%2014-34-38.png)
 *User Interface for Controlling the Door*
 
-![Live Camera Feed](image_url_2)
+![Live Camera Feed](Screenshot%20from%202023-10-26%2014-36-25.png)
 *Live Camera Feed*
 
 ## Installation
@@ -52,4 +52,4 @@ This project is licensed under the XYZ License. See the LICENSE file for details
 
 ## Contact
 
-For inquiries, contact [Your Name] at [your.email@example.com](mailto:your.email@example.com).
+For inquiries, contact [Anubhav Singh] at [mahindrathar456@gmail.com](mailto:your.email@example.com).
