@@ -5,7 +5,6 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 import os
-import RPi.GPIO as GPIO
 cred = credentials.Certificate("csed-intercom-firebase-adminsdk-m46ay-86ce3b9853.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://csed-intercom.asia-southeast1.firebasedatabase.app/'
@@ -18,55 +17,55 @@ ref4 = db.reference('doorStatus')
 ref5 = db.reference('cameraStatus')
 
 
-def servo(angle):
-
-    GPIO.setmode(GPIO.BOARD)
-
-    servo_pin = 12
-
-    frequency = 50
-
-    duty_cycle_min = 2.5
-    duty_cycle_max = 12.5
-
-    angle = 180
-
-    duty_cycle = (duty_cycle_max - duty_cycle_min) * angle / 180.0 + duty_cycle_min
-    servo_pwm = None
-    try:
-        GPIO.setup(servo_pin, GPIO.OUT)
-        servo_pwm = GPIO.PWM(servo_pin, frequency)
-        servo_pwm.start(duty_cycle_min)
-
-        servo_pwm.ChangeDutyCycle(duty_cycle)
-        time.sleep(1)  # Wait for the servo to reach the desired position
-
-        # Clean up
-        servo_pwm.stop()
-        GPIO.cleanup()
-    except KeyboardInterrupt:
-        servo_pwm.stop()
-        GPIO.cleanup()
-        return "Open"
-
-
-def opendoor():
-    servo(0)
+# def servo(angle):
+#
+#     GPIO.setmode(GPIO.BOARD)
+#
+#     servo_pin = 12
+#
+#     frequency = 50
+#
+#     duty_cycle_min = 2.5
+#     duty_cycle_max = 12.5
+#
+#     angle = 180
+#
+#     duty_cycle = (duty_cycle_max - duty_cycle_min) * angle / 180.0 + duty_cycle_min
+#     servo_pwm = None
+#     try:
+#         GPIO.setup(servo_pin, GPIO.OUT)
+#         servo_pwm = GPIO.PWM(servo_pin, frequency)
+#         servo_pwm.start(duty_cycle_min)
+#
+#         servo_pwm.ChangeDutyCycle(duty_cycle)
+#         time.sleep(1)  # Wait for the servo to reach the desired position
+#
+#         # Clean up
+#         servo_pwm.stop()
+#         GPIO.cleanup()
+#     except KeyboardInterrupt:
+#         servo_pwm.stop()
+#         GPIO.cleanup()
+#         return "Open"
 
 
-def closedoor():
-    servo(180)
+# def opendoor():
+#     # servo(0)
+#
+#
+# def closedoor():
+#     # servo(180)
 
 
 def send_email():
     gmail_user = "atcsedintercom@gmail.com"
     gmail_pwd = "kucu kfwv cspf vmph"
-    receiver = ['dk9587327840@gmail.com']  # must be a list
+    receiver = ['tiwariojas578@gmail.com']  # must be a list
 
     mail_content = EmailMessage()
 
     # Mail metadata
-    mail_content['Subject'] = "Activity Detected at the Staff Door"
+    mail_content['Subject'] = "Activity at the Staff Door"
     mail_content['From'] = gmail_user
     mail_content['To'] = receiver
 
@@ -129,11 +128,11 @@ def send_email():
             <p>This is Intercom systems, please check the door's activity. </p>
         </div>
 
-        <a class="button" href="intercomcsed.pages.dev">The Intercom</a>
+        <a class="button" href="intercomcsed.pages.dev/intercom">The Intercom</a>
 
         <div class="card">
             <h3>At Staff door.</h3>
-            <p>Developed at research wing by Anubhav singh.</p>
+            <p>Developed at research wing by Anubhav Singh.</p>
         </div>
     </body>
     </html>''', subtype='html')
@@ -162,7 +161,7 @@ while True:
             print(data3)
             time.sleep(1)
 
-            doorStatus = servo()
+            doorStatus = "Open"
             if doorStatus == "Open":
                 ref4.set("Open")
             else:
@@ -174,12 +173,13 @@ while True:
             else:
                 pass
             if data1 == "Allow":
-                opendoor()
+                pass
             else:
-                closedoor()
-            if data2 == "Deny":
-                closedoor()
+                pass
 
+            if data2 == "Deny":
+                # closedoor()
+                pass
 
 
         except Exception as e:
