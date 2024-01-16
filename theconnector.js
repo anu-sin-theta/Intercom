@@ -1,12 +1,12 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyA-V61Tw27Q-2NVfV7i_twZCA3K5N-P_uE",
-    authDomain: "csed-intercom.firebaseapp.com",
-    databaseURL: "https://csed-intercom.asia-southeast1.firebasedatabase.app",
-    projectId: "csed-intercom",
-    storageBucket: "csed-intercom.appspot.com",
-    messagingSenderId: "597649540949",
-    appId: "1:597649540949:web:bfb74efa3e7eed00cf51dc",
-    measurementId: "G-0FJGEY4K5S"
+  apiKey: "AIzaSyA-V61Tw27Q-2NVfV7i_twZCA3K5N-P_uE",
+  authDomain: "csed-intercom.firebaseapp.com",
+  databaseURL: "https://csed-intercom-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "csed-intercom",
+  storageBucket: "csed-intercom.appspot.com",
+  messagingSenderId: "597649540949",
+  appId: "1:597649540949:web:bfb74efa3e7eed00cf51dc",
+  measurementId: "G-0FJGEY4K5S"
 };
 //dekh bhai inspect karne se kuch nahi hoga tumhe isme se kuch nahi milega source code dekhna hai toh github pe jao @anu-sin-theta.
 //all credential are locked in firebase so you can't access it. reCAPTCHA is also locked so you can't access it.
